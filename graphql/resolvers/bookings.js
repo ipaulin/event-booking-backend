@@ -25,7 +25,7 @@ module.exports = {
 			if (!fetchedEvent) {
 				throw new Error('Event not found');
 			}
-			const userFindResult = await User.findById(req.userID);
+			const userFindResult = await User.findById(req.userId);
 
 			const booking = new Booking({
 				event: fetchedEvent,
