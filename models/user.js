@@ -1,24 +1,24 @@
-const mongoose = require('mongoose');
+const mongoose = require( 'mongoose' );
 const Schema = mongoose.Schema;
 
 // Schema
-const userSchema = new Schema({
+const userSchema = new Schema( {
 	email: {
 		type: String,
-		required: true
+		required: true,
 	},
 	password: {
 		type: String,
-		required: true
+		required: true,
 	},
-	// relationsip 
+	// relationsip
 	createdEvents: [
 		{
 			type: Schema.Types.ObjectId,
-			ref: 'Event'
-		}
-	]
-});
+			ref: 'Event',
+		},
+	],
+} );
 
 // Model
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model( 'User', userSchema );
